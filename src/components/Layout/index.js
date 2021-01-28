@@ -3,7 +3,7 @@ import s from './style.module.css';
 import layoutImage from "../../img/bg1.jpg"
 
 const Layout = ({ id, title, descr, urlBg, colorBg }) => {
-    const ifBackground = urlBg ? { backgroundImage : "url("+layoutImage+")" } : { backgroundColor: colorBg }
+    const ifBackground = urlBg ? { backgroundImage: "url(" + layoutImage + ")" } : { backgroundColor: colorBg }
 
     return (
         <section className={s.root} id={id} style={ifBackground}>
