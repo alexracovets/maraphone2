@@ -3,8 +3,11 @@ import s from './style.module.css';
 
 const Footer = () => {
     return (
-        <footer className={s.footer}>
-            © Copyright 2021
+        <footer>
+            <div className={s.wrapper}>
+                <h3>THANKS FOR VISITING</h3>
+                <p>© 2021 #ReactMarathon.</p>
+            </div>
         </footer>
     )
 
