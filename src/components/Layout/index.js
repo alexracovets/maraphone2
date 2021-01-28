@@ -1,18 +1,19 @@
 import s from './style.module.css';
 
+import layoutImage from "../../img/bg1.jpg"
 
 const Layout = ({ id, title, descr, urlBg, colorBg }) => {
+    const ifBackground = urlBg ? { backgroundImage : "url("+layoutImage+")" } : { backgroundColor: colorBg }
 
-    // const isBackImage = 
     return (
-        <section className={s.root} id={id}>
+        <section className={s.root} id={id} style={ifBackground}>
             <div className={s.wrapper}>
                 <article>
                     <div className={s.title}>
                         <h3>{title}</h3>
                         <span className={s.separator}></span>
                     </div>
-                    <div className={s.desc, s.full}>
+                    <div className={s.desc}>
                         <p>{descr}</p>
                     </div>
 
