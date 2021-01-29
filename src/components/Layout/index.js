@@ -25,4 +25,6 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {
 
 }
 
+
+
 export default Layout;
