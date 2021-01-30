@@ -2,7 +2,8 @@ import s from './style.module.css';
 
 import layoutImage from "../../img/bg1.jpg"
 
-const Layout = ({ id, title, descr, urlBg, colorBg }) => {
+const Layout = ({ id, title, descr, urlBg, colorBg, children}) => {
+
     const ifBackground = urlBg ? { backgroundImage: "url(" + layoutImage + ")" } : { backgroundColor: colorBg }
 
     return (
@@ -14,7 +15,7 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {
                         <span className={s.separator}></span>
                     </div>
                     <div className={s.desc}>
-                        <p>{descr}</p>
+                        <span>{children}</span>
                     </div>
 
                 </article>
