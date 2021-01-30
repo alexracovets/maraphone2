@@ -1,0 +1,35 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.root {
+    font-size: 1.4rem;
+    position: relative;
+    background: orange;
+    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+    z-index: 5;
+    background-attachment: fixed;
+}
+
+.root .wrapper {
+    padding: 5rem 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 949px) {
+    .root {
+        clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+        background-position: top left;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 649px) {
+    .root .wrapper {
+        padding: 10rem 2rem 8rem;
+    }
+}

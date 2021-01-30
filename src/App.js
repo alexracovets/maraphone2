@@ -4,17 +4,26 @@ import Header from './components/Header'
 import Layout from './components/Layout'
 import Footer from './components/Footer'
 
+import CardRender from './components/CardRender';
+
 
 const App = () => {
   return (
     <>
       <Header title="This is Tittle" descr="This is description" />
-      <Layout id="layout_1" title="This is first Layout" descr="Discription for first Layout" urlBg colorBg="green" />
-      <Layout id="layout_2" title="This is second Layout" descr="Discription for second Layout" urlBg={false} colorBg="red" />
-      <Layout id="layout_3" title="This is third Layout" descr="Discription for third Layout" urlBg colorBg="blue" />
+      <Layout id="layout_1" title="This is first Layout" urlBg colorBg="green">
+        <p>Discription for first Layout</p>
+      </Layout>
+      <CardRender />
+      <Layout id="layout_2" title="This is second Layout" urlBg={false} colorBg="red">
+        <p>In the game two players face off against one another, one side playing as "blue", the other as "red" on a 3x3 grid.</p>
+        <p>Each player has five cards in a hand and the aim is to capture the opponent's cards by turning them into the player's own color of red or blue.</p>
+      </Layout>
+      <Layout id="layout_3" title="This is third Layout" urlBg colorBg="blue">
+        <p>To win, a majority of the total ten cards played (including the one card that is not placed on the board) must be of the player's card color. To do this, the player must capture cards by placing a card adjacent to an opponent's card whereupon the 'ranks' of the sides where the two cards touch will be compared. If the rank of the opponent's card is higher than the player's card, the player's card will be captured and turned into the opponent's color. If the player's rank is higher, the opponent's card will be captured and changed into the player's color instead.</p>
+      </Layout>
       <Footer />
     </>
-
   )
 }
 
